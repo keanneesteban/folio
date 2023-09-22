@@ -32,20 +32,41 @@
                 <div class="navbar-nav">
                     <ul class="ul-defaults-none main-menu">
                         <li class="nav-item">Home</li>
-                        <li class="nav-item">About Me</li>
-                        <li class="nav-item">Contact</li>
+                        <li class="nav-item" data-open="about">About Me</li>
+                        <li class="nav-item" data-open="contact">Contact</li>
                     </ul>
                 </div>
             </nav>
         </header>
     </main>
 
-    <!-- about me pop up -->
+    <!-- about me modal -->
 
-    <div class="full-site-modal page-block is-visible" data-animation="zoomInOut">
+    <div id="about" class="full-site-modal page-block" data-animation="zoomInOut">
         <header class="modal-header">
             <h3>ABOUT PAGE</h3>
-            <i class="fas fa-times"></i>
+            <i class="fas fa-times" data-close></i>
+        </header>
+        <div class="modal-body">
+            <div class="img-wrapper">
+                <img class="keanne" src="/assets/keanne.jpg" alt="keanne">
+            </div>
+            <h2>keanne esteban</h2>
+            <p>text 1</p>
+            <p>text 2</p>
+            <div>
+                <div>email me</div>
+                <a href="mailto:keanneesteban7@gmail.com">keanneesteban7@gmail.com</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- contact modal -->
+
+    <div id="contact" class="full-site-modal page-block" data-animation="zoomInOut">
+        <header class="modal-header">
+            <h3>CONTACT PAGE</h3>
+            <i class="fas fa-times" data-close></i>
         </header>
         <div class="modal-body">
             <div class="img-wrapper">
