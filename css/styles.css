@@ -1,3 +1,62 @@
+.theme-panel {
+    position: fixed;
+    right: 0;
+    top: 25%;
+    z-index: 100;
+    transition: .4s;
+    transform: translateX(100%);
+}
+
+.theme-panel.open {
+    transform: translateX(0);
+}
+
+.theme-body {
+    background-color: #4954ef;
+    border: transparent;
+    max-width: 185px;
+    padding: 15px 13px;
+    text-align: center;
+    border-bottom-left-radius: 25px;
+    position: relative;
+}
+
+.theme-body > span {
+    color: white;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: -.09px;
+    line-height: 26px;
+    padding-bottom: 8px;
+    display: inline-flex;
+}
+
+.theme-body .btn-group {
+    box-shadow: 0 12px 34px rgba(22, 28, 45, .2);
+    border-radius: 33px;
+    background-color: white;
+    overflow: hidden;
+    display: flex;
+    max-width: 153px;
+}
+
+.theme-body .btn-group .switcher-btn {
+    background: transparent;
+    border: none;
+    width: 50%;
+    font-size: 11px;
+    font-weight: 700;
+    height: 42px;
+    padding-left: 15px;
+    padding-right: 15px;
+    letter-spacing: 1.4px;
+    text-transform: uppercase;
+}
+
+.theme-body .btn-group .switcher-btn.active {
+    background-color: #ced4e7;
+}
+
 .navbar {
     display: flex;
     flex-flow: row nowrap;
@@ -35,8 +94,6 @@
     display: inline-block;
     line-height: 1.5;
 }
-
-
 
 
 .main-menu { display: flex }
