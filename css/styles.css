@@ -15,6 +15,30 @@
     line-height: 1.42;
 }
 
+.hero-content {
+    text-align: center;
+    padding: 5.5rem 0;
+}
+
+.code-icon {
+    background-color: #da5252;
+    color: var(--color-text);
+    padding: 1.25rem 1.5rem;
+    border-radius: 50rem;
+    display: inline-block;
+    margin-bottom: 2.5rem;
+    text-align: center;
+}
+
+.code-icon .fa-code {
+    font-size: 2rem;
+    display: inline-block;
+    line-height: 1.5;
+}
+
+
+
+
 .main-menu { display: flex }
 
 .main-menu .nav-item {
