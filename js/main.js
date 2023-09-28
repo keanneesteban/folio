@@ -26,8 +26,9 @@ const closeModal = document.querySelectorAll(modalClose);
 const setActive = (elm, selector) => {
     if (document.querySelector(`${selector}.${active}`) !== null) {
         document.querySelector(`${selector}.${active}`).classList.remove(active);
-    }   
-};
+    } 
+    elm.classList.add(active);
+}
 
 const setTheme = (val) => {
     if (val === dark ) {
