@@ -26,10 +26,8 @@ const closeModal = document.querySelectorAll(modalClose);
 const setActive = (elm, selector) => {
     if (document.querySelector(`${selector}.${active}`) !== null) {
         document.querySelector(`${selector}.${active}`).classList.remove(active);
-    } else {
-        elm.classList.add(active);
-    }
-}
+    }   
+};
 
 const setTheme = (val) => {
     if (val === dark ) {
@@ -39,7 +37,20 @@ const setTheme = (val) => {
         root.setAttribute(dataTheme, light);
         localStorage.setItem(theme, light);
     }
-}
+};
+
+if (currentTheme) {
+    root.setAttribute(dataTheme, currentTheme);
+    switcher.forEach((btn) => {
+        btn.classList.remove(active);
+    })
+
+    if (currentTheme === dark ) {
+        switcher[1].classList.add(active);
+    } else {
+        switcher[0].classList.add(active);
+    }
+};
 
 toggleTheme.addEventListener('click', function() {
     const tab = this.parentElement.parentElement;
@@ -48,7 +59,7 @@ toggleTheme.addEventListener('click', function() {
     } else {
         tab.classList.remove(open);
     }
-})
+});
 
 for (const elm of switcher) {
     elm.addEventListener('click', function() {
@@ -56,7 +67,7 @@ for (const elm of switcher) {
         setActive(elm, switcherBtn);
         setTheme(toggle);
     })
-}
+};
 
 // Full Site Modals "open buttons"
 for (const elm of openModal) {
@@ -64,10 +75,10 @@ for (const elm of openModal) {
         const modalID = this.dataset.open;
         document.getElementById(modalID).classList.add(isVisible);
     })
-}
+};
 
 for (const elm of closeModal) {
     elm.addEventListener('click', function() {
         this.parentElement.parentElement.classList.remove(isVisible);
     })
-}
+};
