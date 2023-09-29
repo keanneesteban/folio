@@ -85,6 +85,8 @@ button:not(:disabled):not(.disabled) {
 
 .round-pill { border-radius: 50rem; }
 
+.round-pill:hover { transform: scaleX(1.12); }
+
 .header-lg {
     font-size: 5rem;
     letter-spacing: -2.5px;
