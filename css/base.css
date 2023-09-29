@@ -19,6 +19,7 @@ body {
     color: var(--color-text);
     background-color: var(--bg);
     text-align: left;
+    cursor: crosshair;
 }
 
 a {
