@@ -164,7 +164,7 @@
     cursor: pointer;
 }
 
-.portfolio-filter-nav .filter-link:active {
+.portfolio-filter-nav .filter-link.active {
     color: #495fef;
 }
 
@@ -219,7 +219,7 @@
 }
 
 .card-body:hover .card-popup-box {
-    bottom: 80px;
+    bottom: 100px;
     opacity: 1;
 }
 

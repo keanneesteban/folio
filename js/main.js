@@ -11,6 +11,8 @@ const modalOpen = '[data-open]';
 const modalClose = '[data-close]';
 const isVisible = 'is-visible';
 
+const dataFilter = '[data-filter]';
+
 const root = document.documentElement;
 
 // theme //
@@ -19,7 +21,11 @@ const toggleTheme = document.querySelector(themeTab);
 const switcher = document.querySelectorAll(switcherBtn);
 const currentTheme = localStorage.getItem(theme);
 
+// portfolio //
 
+const filterLink = document.querySelectorAll(dataFilter);
+
+// modals //
 const openModal = document.querySelectorAll(modalOpen);
 const closeModal = document.querySelectorAll(modalClose);
 
@@ -69,6 +75,12 @@ for (const elm of switcher) {
         setTheme(toggle);
     })
 };
+
+for (const link of filterLink) {
+    link.addEventListener('click', function() {
+        setActive(link, '.filter-link');
+    })
+}
 
 // Full Site Modals "open buttons"
 for (const elm of openModal) {
