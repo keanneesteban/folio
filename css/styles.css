@@ -196,7 +196,7 @@
 
 .card-popup-box {
     position: absolute;
-    bottom: 0;
+    bottom: 40px;
     left: 20px;
     right: 20px;
     transition: 0.4s;
@@ -210,8 +210,8 @@
     content: "";
     background: var(--bg);
     top: 0;
-    left: 0;
-    right: 0;
+    left: 10px;
+    right: 10px;
     bottom: 0;
     z-index: -1;
     opacity: 0.9;
