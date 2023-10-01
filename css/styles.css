@@ -171,8 +171,10 @@
 .portfolio-grid {
     display: flex;
     flex-wrap: wrap;
-    padding: 3rem 1rem;
     justify-content: center;
+    max-width: 1400px;
+    width: 100%;
+    margin: 0 auto;
 }
 
 .portfolio-card {
@@ -180,7 +182,10 @@
     max-width: 225px;
 }
 
-.card-body { position: relative; }
+.card-body { 
+    position: relative;
+    padding: 3rem 1rem;
+}
 
 .card-body img {
     width: 100%;
@@ -214,7 +219,7 @@
 }
 
 .card-body:hover .card-popup-box {
-    bottom: 40px;
+    bottom: 80px;
     opacity: 1;
 }
 
