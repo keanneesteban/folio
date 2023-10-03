@@ -243,7 +243,6 @@
     margin-bottom: 0;
 }
 
-
 .main-menu { display: flex }
 
 .main-menu .nav-item {
@@ -254,6 +253,14 @@
     text-transform: lowercase;
 }
 
+.modal {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.8);
+}
+
+.modal,
 .full-site-modal {
     position: fixed;
     top: 0;
@@ -262,9 +269,18 @@
     right: 0;
     padding: 1rem;
     transition: all .35s ease-in;
-    background-color: white;
-    visibility: hidden;
-    opacity: 0;
+    /* visibility: hidden;
+    opacity: 0; */
+}
+
+.modal-dialog {
+    max-width: 800px;
+    max-height: 80vh;
+    background: var(--bg-panel);
+    color: var(--color-text-base);
+    overflow: hidden;
+    padding: 1.25rem 1.85rem;
+    border-radius: 5px;
 }
 
 .modal-header {
@@ -293,11 +309,17 @@
     align-items: center;
 }
 
-.keanne {
-    width: 18rem;
-    height: 18rem;
-    border-radius: 50%;
+.modal-body .img-wrapper {
+    max-width: 200px;
+    margin-right: 0.75rem;
 }
+
+.modal-body .img-wrapper img {
+    width: 100%;
+    border-radius: 8px;
+    object-fit: cover;
+}
+
 
 [data-animation="zoomInOut"].full-site-modal {
     transform: scale(.2);
