@@ -110,7 +110,7 @@ for (const link of filterLink) {
 
 
 
-// Full Site Modals "open buttons"
+// Modal/Full Site Modals "open buttons"
 for (const elm of openModal) {
     elm.addEventListener('click', function() {
         const modalID = this.dataset.open;
@@ -123,3 +123,17 @@ for (const elm of closeModal) {
         this.parentElement.parentElement.parentElement.classList.remove(isVisible);
     })
 };
+
+// Modals
+document.addEventListener('click', (e) => {
+    console.log(e.target, document.querySelector('.modal.is-visible'));
+    if (e.target === document.querySelector('.modal.is-visible')) {
+        document.querySelector('.modal.is-visible').classList.remove(isVisible);
+    }
+});
+
+document.addEventListener('keyup', (e) => {
+    if (e.key === 'Escape') {
+        document.querySelector('.modal.is-visible').classList.remove(isVisible);
+    }
+});
