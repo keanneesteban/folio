@@ -305,7 +305,19 @@
     box-shadow: 0 22px 34px rgba(22, 28, 45, 0.18);
     transition: all .3s ease-in-out;
     position: absolute;
+    z-index: -1;
+    opacity: 0;
 }
+
+.review-item.active {
+    transform: translate(0, -10%);
+    z-index: 10;
+    opacity: 1;
+}
+
+.review-item.prev { transform: translateX(-75%); opacity: 0.25; }
+.review-item.next { transform: translateX(75%); opacity: 0.25; }
+
 
 .review-text {
     padding-bottom: 2.5rem;
