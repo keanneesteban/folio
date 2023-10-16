@@ -126,7 +126,7 @@ for (const elm of closeModal) {
 
 // Modals
 document.addEventListener('click', (e) => {
-    console.log(e.target, document.querySelector('.modal.is-visible'));
+    (e.target, document.querySelector('.modal.is-visible'));
     if (e.target === document.querySelector('.modal.is-visible')) {
         document.querySelector('.modal.is-visible').classList.remove(isVisible);
     }
