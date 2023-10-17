@@ -24,3 +24,48 @@
 
 .about-text p,
 .about-text .contact-me-block { font-size: 1.2rem; }
+
+.marquee {
+    width: var(--marquee-width);
+    height: var(--marquee-height);
+    overflow: hidden;
+    margin: 2rem auto;
+    position: relative;
+}
+
+.marquee-content {
+    list-style: none;
+    display: flex;
+    height: 100%;
+}
+
+.marquee-content li {
+    width: var(--marquee-elms-width);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-height: 100%;
+    white-space: nowrap;
+    flex-shrink: 0;
+    font-size: calc(var(--marquee-height) * 3 / 4);
+}
+
+.marquee::before,
+.marquee::after {
+    position: absolute;
+    height: 100%;
+    top: 0;
+    content: "";
+    z-index: 1;
+    width: 10rem;
+}
+
+.marquee::before {
+    left: 0;
+    background: linear-gradient(to right, var(--bg) 0%, transparent 100%);
+}
+
+.marquee::after {
+    right: 0;
+    background: linear-gradient(to left, var(--bg) 0%, transparent 100%);
+}
