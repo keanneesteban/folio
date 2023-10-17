@@ -37,10 +37,11 @@
     list-style: none;
     display: flex;
     height: 100%;
+    animation: scrolling var(--marquee-duration-animation) linear infinite;
 }
 
 .marquee-content li {
-    width: var(--marquee-elms-width);
+    width: var(--marquee-elm-width);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -68,4 +69,9 @@
 .marquee::after {
     right: 0;
     background: linear-gradient(to left, var(--bg) 0%, transparent 100%);
+}
+
+@keyframes scrolling {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(calc(-1 * var(--marquee-elm-width) * var(--marquee-elms))); } 
 }
