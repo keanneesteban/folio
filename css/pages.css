@@ -2,8 +2,8 @@
     background: var(--bg);
 }
 
-#about .modal-body {
-    margin-top: 5rem;
+#about .modal-body,
+#contact .modal-body {
     padding: 2rem;
     flex-wrap: wrap;
 }
@@ -24,6 +24,28 @@
 
 .about-text p,
 .about-text .contact-me-block { font-size: 1.2rem; }
+
+#contact .modal-body {
+    display: block;
+}
+
+.modal-body .contact-text { padding-bottom: 3.5rem; }
+
+.folio-form .form-control {
+    display: block;
+    border-top: 0;
+    border-left: 0;
+    border-right: 0;
+    max-width: 500px;
+    width: 100%;
+    color: var(--color-text);
+    padding: 0 0 5px 0;
+    line-height: 26px;
+    margin-bottom: 40px;
+    border-bottom: 1px solid var(--border);
+    outline: none;
+    background: transparent;
+}
 
 .marquee {
     width: var(--marquee-width);
