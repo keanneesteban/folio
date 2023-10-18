@@ -118,4 +118,11 @@
     }
 }
 
-@media (max-width: 450px ) { :root { --marquee-elms-displayed: 2; } }
+@media (max-width: 450px ) { 
+    :root { --marquee-elms-displayed: 2; }
+
+    .modal-body {
+        flex-direction: column;
+    }
+
+}
